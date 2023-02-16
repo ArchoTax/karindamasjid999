@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin-top: 65px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: #fafafa;
+  background-color: #212121;
+}
+
+/* Nav */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(33, 33, 33, 0.9);
+  border-bottom: 1px rgba(33, 33, 33, 0.3) solid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .nav-logo {
+  width: 6rem;
+}
+
+.navbar-nav a {
+  color: #fafafa;
+  display: inline-block;
+  margin: 0 1rem;
+  transform: translateX(25rem);
+  transition: 0.1s linear;
+}
+
+.navbar-nav a:hover {
+  color: #d39b25;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid;
+  color: #fafafa;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fafafa;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: #d39b25;
+}
+
+#menu {
+  display: none;
+}
+
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+  font-size: 4rem;
+}
+
+/* Blog Posts */
+
+.blog-posts {
+  width: min(1200px 100%);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.post {
+  color: #212121;
+  width: calc(33% - 10px);
+  overflow: hidden;
+}
+
+.post-img {
+  width: 100%;
+  border-radius: 6px;
+  transition: 0.3s linear;
+}
+
+.post-content {
+  background-color: #fafafadd;
+  margin: 0 20px;
+  padding: 30px;
+  border-radius: 6px;
+  transform: translateY(-60px);
+  transition: 0.3s linear;
+}
+
+.post-content h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.post-content p {
+  margin-bottom: 10px;
+}
+
+.post-content .cta {
+  font-size: 15px;
+  font-style: italic;
+  color: #d39b25;
+}
+
+.post:hover .post-img {
+  transform: translateY(20px);
+}
+
+.post:hover .post-content {
+  transform: translateY(-80px);
+}
+
+.post img {
+  object-fit: cover;
+}
+
+/* Footer */
+body footer {
+  flex: none;
+}
+
+footer {
+  background-color: #d39b25;
+  text-align: center;
+  padding: 1rem 31.2rem;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: #fafafa;
+  transition: 0.1s linear;
+}
+
+footer a:hover {
+  color: #212121;
+}
+
+footer .links {
+  margin-bottom: 1rem;
+}
+
+footer .links a {
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+}
+
+/* Tablet */
+@media (max-width: 834px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgba(33, 33, 33, 0.9);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #fafafa;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    transform: translateX(0);
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .navbar .nav-logo {
+    width: 7rem;
+  }
+
+  /* Blog Posts */
+  body {
+    min-height: 100vh;
+    margin-top: 10rem;
+  }
+
+  .blog-posts {
+    justify-content: center;
+  }
+
+  .post-content h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .post-content p {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  .post-content .cta {
+    font-size: 20px;
+    font-style: italic;
+    color: #d39b25;
+  }
+
+  .post {
+    width: min(834px, 100%);
+  }
+
+  /* Footer */
+  footer {
+    padding: 3rem 22.1rem;
+  }
+
+  footer .links a {
+    padding: 0.7rem 1rem;
+    font-size: 2.5rem;
+  }
+
+  footer .credit {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  /* Footer */
+  footer {
+    padding: 3rem 3.5rem;
+  }
+
+  footer .links a {
+    padding: 0.7rem 1rem;
+    font-size: 2rem;
+  }
+
+  footer .credit {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+}

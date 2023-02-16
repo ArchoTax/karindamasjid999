@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #fafafa;
+  background-color: #212121;
+}
+
+/* Nav */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(33, 33, 33, 0.9);
+  border-bottom: 1px rgba(33, 33, 33, 0.3) solid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .nav-logo {
+  width: 6rem;
+}
+
+.navbar-nav a {
+  color: #fafafa;
+  display: inline-block;
+  margin: 0 1rem;
+  transform: translateX(25rem);
+  transition: 0.1s linear;
+}
+
+.navbar-nav a:hover {
+  color: #d39b25;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid;
+  color: #fafafa;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fafafa;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: #d39b25;
+}
+
+#menu {
+  display: none;
+}
+
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+  font-size: 4rem;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero .content {
+  padding: 9rem 7%;
+  max-width: 75rem;
+}
+
+.hero .content h1 {
+  font-size: 2em;
+  color: #fafafa;
+}
+
+.hero .content p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  line-height: 1.1;
+  color: #fafafa;
+}
+
+.hero .content .p2 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  line-height: 1.1;
+  color: #fafafa;
+}
+
+.img img {
+  margin-top: 2.5rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.hero .content .p3 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  line-height: 1.1;
+  color: #fafafa;
+}
+.hero .content .p4 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  line-height: 1.1;
+  color: #fafafa;
+}
+
+/* Footer */
+footer {
+  background-color: #d39b25;
+  text-align: center;
+  padding: 1rem 0.3rem;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: #fafafa;
+  transition: 0.1s linear;
+}
+
+footer a:hover {
+  color: #212121;
+}
+
+footer .links {
+  margin-bottom: 1rem;
+}
+
+footer .links a {
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+}
+
+/* Tablet */
+@media (max-width: 834px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .hero .content h1 {
+    font-size: 5em;
+    color: #fafafa;
+  }
+
+  .hero .content p {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    line-height: 1.1;
+    color: #fafafa;
+  }
+
+  .hero .content .p2 {
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    line-height: 1.1;
+    color: #fafafa;
+  }
+  .hero .content .p3 {
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    line-height: 1.1;
+    color: #fafafa;
+  }
+
+  .hero .content .p4 {
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    line-height: 1.1;
+    color: #fafafa;
+  }
+
+  #menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgba(33, 33, 33, 0.9);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #fafafa;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    transform: translateX(0);
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .navbar .nav-logo {
+    width: 7rem;
+  }
+
+  /* Footer */
+  footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  footer .links a {
+    padding: 0.7rem 1rem;
+    font-size: 2.5rem;
+  }
+
+  footer .credit {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  /* Hero Section */
+  .content p,
+  .p2,
+  .p3,
+  .p4 {
+    font-weight: 300;
+  }
+
+  .hero .content h1 {
+    font-size: 3em;
+    color: #fafafa;
+  }
+
+  .hero .content p {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    line-height: 1.1;
+    color: #fafafa;
+  }
+
+  .hero .content .p2 {
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    line-height: 1.1;
+    color: #fafafa;
+  }
+  .hero .content .p3 {
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    line-height: 1.1;
+    color: #fafafa;
+  }
+
+  .hero .content .p4 {
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    line-height: 1.1;
+    color: #fafafa;
+  }
+
+  /* Footer */
+  footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  footer .links a {
+    padding: 0.7rem 1rem;
+    font-size: 2rem;
+  }
+
+  footer .credit {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+}
